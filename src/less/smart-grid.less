@@ -1,19 +1,28 @@
 @columns: 12;
 @atom: (100% / @columns);
 
+@break_sm: 576px;
 @break_xs: 375px;
 
 @offset: 30px;
+@offset_sm: @offset;
 @offset_xs: @offset;
 
 @offset_one_side: (@offset / 2);
+@offset_sm_one_side: (@offset_sm / 2);
 @offset_xs_one_side: (@offset_xs / 2);
 
-@fields: 20px;
+@fields: 30px;
+@fields_sm: 20px;
 
 .wrapper-full(){
     padding-left: @fields;
     padding-right: @fields;
+
+    .sm-block({
+        padding-left: @fields_sm;
+        padding-right: @fields_sm;
+    });
 }
 
 .row-offsets(){
@@ -72,6 +81,11 @@
     width: ~"calc(@{val} - @{offset})";
 }
 
+.size-sm(@n){
+    @val: 100% / @columns * @n;
+    .sm(width, ~"calc(@{val} - @{offset_sm})");
+}
+
 .size-xs(@n){
     @val: 100% / @columns * @n;
     .xs(width, ~"calc(@{val} - @{offset_xs})");
@@ -109,6 +123,38 @@
     padding-right: ~"calc(@{val} + @{offset_one_side})";
 }
 
+.shift-sm(@n){
+    @val: 100% / @columns * @n;
+    .sm(margin-left, ~"calc(@{val} + @{offset_sm_one_side})");
+    .sm(margin-right, ~"calc(@{val} + @{offset_sm_one_side})");
+}
+
+.shift-sm-left(@n){
+    @val: 100% / @columns * @n;
+    .sm(margin-left, ~"calc(@{val} + @{offset_sm_one_side})");
+}
+
+.shift-sm-right(@n){
+    @val: 100% / @columns * @n;
+    .sm(margin-right, ~"calc(@{val} + @{offset_sm_one_side})");
+}
+
+.shift-sm-padding(@n){
+    @val: 100% / @columns * @n;
+    .sm(padding-left, ~"calc(@{val} + @{offset_sm_one_side})");
+    .sm(padding-right, ~"calc(@{val} + @{offset_sm_one_side})");
+}
+
+.shift-sm-padding-left(@n){
+    @val: 100% / @columns * @n;
+    .sm(padding-left, ~"calc(@{val} + @{offset_sm_one_side})");
+}
+
+.shift-sm-padding-right(@n){
+    @val: 100% / @columns * @n;
+    .sm(padding-right, ~"calc(@{val} + @{offset_sm_one_side})");
+}
+
 .shift-xs(@n){
     @val: 100% / @columns * @n;
     .xs(margin-left, ~"calc(@{val} + @{offset_xs_one_side})");
@@ -139,6 +185,18 @@
 .shift-xs-padding-right(@n){
     @val: 100% / @columns * @n;
     .xs(padding-right, ~"calc(@{val} + @{offset_xs_one_side})");
+}
+
+.sm(@name, @value){
+    @media screen and (max-width: @break_sm){
+        @{name}: @value;
+    }
+}
+
+.sm-block(@content){
+    @media screen and (max-width: @break_sm){
+        @content();
+    }
 }
 
 .xs(@name, @value){

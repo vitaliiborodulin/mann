@@ -3,7 +3,7 @@ module.exports = {
     offset: '30px', //columns
     container: {
       maxWidth: '1140px',
-        fields: '20px' // container
+        fields: '30px' // container
       },
       breakPoints: {
         // xl: {
@@ -12,11 +12,13 @@ module.exports = {
         // lg: {
         //  width: '992px'
         // },
-        // md: {
-        //  width: '768px'
-        // },
+        sm: {
+         width: '576px',
+				 fields: '20px'
+        },
         xs: {
-         width: '375px'
+         width: '375px',
+				 
         }
       },
      // detailedCalc: true

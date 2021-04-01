@@ -1,0 +1,52 @@
+.citate {
+	padding-top: 89px;
+	padding-bottom: 80px;
+
+	&__content {
+		.row-flex();
+		align-items: center;
+	}
+
+	&__info {
+		.col();
+		.size(8);
+
+		font-size: 20px;
+		line-height: 30px;
+
+		p:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__text {
+		.col();
+		.size(4);
+		position: relative;
+
+		font-size: 30px;
+		line-height: 40px;
+
+		&::before, &::after {
+			position: absolute;
+			color: @accent;
+			font-size: 200px;
+		}
+
+		&::before {
+			content: '\00ab';
+			top: 0;
+			left: -130px;
+		}
+
+		&::after {
+			content: '\00bb';
+			right: -78px;
+			bottom: -13px;
+		}
+
+		span {
+			font-weight: 700;
+		}
+	}
+}

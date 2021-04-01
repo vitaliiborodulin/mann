@@ -26,6 +26,7 @@
 		"smart-grid": "^2.1.2"
 	},
 	"dependencies": {
+		"@fancyapps/fancybox": "^3.5.7",
 		"jquery.maskedinput": "^1.4.1"
 	}
 }

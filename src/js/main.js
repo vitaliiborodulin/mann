@@ -1,4 +1,5 @@
 //= ../../node_modules/jquery.maskedinput/src/jquery.maskedinput.js
+//= ../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js
 
 $(function(){
 
