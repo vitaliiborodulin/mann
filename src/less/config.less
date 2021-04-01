@@ -1,0 +1,68 @@
+// USER VARIABLES SECTION
+
+@accent: #00CBA6; // Accent Color
+@fontsize: 16px; // Body Font Size
+@lineheight: 1.65; // Document Line Height
+@textcolor: #222222; // Text Color
+@white: #ffffff;
+
+@userfont: 'pt_root_ui', sans-serif;
+@systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
+.font(@fname, @fstyle, @fweight, @furl) {
+	@font-face {
+		font-family: @fname;
+		font-style: @fstyle;
+		font-weight: @fweight;
+		src: url(@furl) format('woff2');
+	}
+}
+
+.font('pt_root_ui', normal, 400, '../fonts/pt_root_ui_regular.woff2');
+.font('pt_root_ui', normal, 700, '../fonts/pt_root_ui_bold.woff2');
+
+// GENERAL DOCUMENT STYLES
+
+.reset();
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.container {
+	.wrapper();
+}
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: @accent;
+	color: #fff;
+}
+
+input, textarea {
+	outline: none;
+	&:focus:required:invalid { border-color: red }
+	&:required:valid { border-color: green }
+}
+
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: @userfont;
+	font-size: @fontsize;
+	font-weight: 400;
+	line-height: @lineheight;
+	color: @textcolor;
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+}
+
