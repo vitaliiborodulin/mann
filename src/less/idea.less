@@ -1,0 +1,41 @@
+.idea {
+	padding-top: 68px;
+	padding-bottom: 78px;
+
+	background: @beige url(../img/promise-bg.svg) no-repeat center right;
+	background-size: 340px 100%;
+	
+	.md-block({
+		padding-top: 30px;
+		padding-bottom: 50px;
+		background: @beige url(../img/promise-bg-mob.svg) no-repeat center right/contain;
+		background-position: 100% 50%;
+	});
+	.sm(background-position-x, 113%);
+	.xs(background-position-x, 125%);
+
+	&__content {
+		max-width: 60%;
+		.sm(max-width, 90%);
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		.md-block({
+			margin-bottom: 20px;
+			font-size: 22px;
+			line-height: 30px;
+		});
+	}
+
+	p {
+		margin-bottom: 13px;
+		font-size: 20px;
+		line-height: 30px;
+		.md-block({
+			font-size: 16px;
+			line-height: 24px;
+			margin-bottom: 10px;
+		});
+	}
+}

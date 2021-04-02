@@ -9,16 +9,18 @@ module.exports = {
         // xl: {
         //   width: '1200px'
         // },
-        // lg: {
-        //  width: '992px'
-        // },
+        lg: {
+         width: '992px'
+        },
+				md: {
+					width: '770px'
+				},
         sm: {
          width: '576px',
 				 fields: '20px'
         },
         xs: {
-         width: '375px',
-				 
+         width: '375px'
         }
       },
      // detailedCalc: true

@@ -20,6 +20,7 @@
 	}
 }
 
+.font('pt_root_ui', normal, 300, '../fonts/pt_root_ui_light.woff2');
 .font('pt_root_ui', normal, 400, '../fonts/pt_root_ui_regular.woff2');
 .font('pt_root_ui', normal, 700, '../fonts/pt_root_ui_bold.woff2');
 
@@ -52,15 +53,14 @@ input, textarea {
 	&:required:valid { border-color: green }
 }
 
-
 html {
-	scroll-behavior: smooth;
+	// scroll-behavior: smooth;
 }
 
 body {
 	font-family: @userfont;
 	font-size: @fontsize;
-	font-weight: 400;
+	font-weight: 300;
 	line-height: @lineheight;
 	color: @textcolor;
 	min-width: 320px;
@@ -68,3 +68,33 @@ body {
 	overflow-x: hidden;
 }
 
+.section__title {
+	font-size: 60px;
+	line-height: 60px;
+	font-weight: 300;
+	.md-block({
+		font-size: 30px;
+		line-height: 36px;
+	});
+}
+
+.arrowUpBtn {
+	display: none;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	border-radius: 50%;
+	box-shadow: 0 0 5px @white;
+	opacity: 0.5;
+	cursor: pointer;
+	z-index: 100;
+	transition: opacity 0.2s;
+	background: @white no-repeat url(../img/up-button.svg) center/contain;
+
+	&:hover {
+			opacity: 1;
+	}
+}

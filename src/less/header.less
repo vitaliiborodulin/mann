@@ -10,13 +10,17 @@
 
 		font-size: 18px;
 		line-height: 23px;
+		.sm-block({
+			font-size: 14px;
+			line-height: 16px;
+		});
 
 		a {
 			color: inherit;
 			text-decoration: none;
 			transition: color 0.3s;
 
-			&:hover, &:active, &:focus {
+			&:hover {
 				color: @accent;
 			}
 		}
@@ -42,22 +46,140 @@
 	&__menu	{
 		display: flex;
 		align-items: center;
-
 		margin-right: auto;
+
+		.md-block({
+			transform: translateX(-100%);
+			display: none;
+			transform-origin: right top;
+			transition: all 0.5s ease-in-out;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			position: fixed;
+			left: 0;
+			top: 0;
+			z-index: 12;
+
+			width: 100%;
+			height: 100%;
+			padding: 40px;
+			color: @textcolor;
+			background-color: @white;
+
+			li {
+				margin-bottom: 20px;
+			}
+		});
+
+		&.header__menu--open {
+			transform: translateX(0);
+			li {
+				font-size: 30px;
+				margin: 10px;
+				padding: 10px;
+			}
+		}
 		
 
 		li + li {
 			margin-left: 40px;
+			.md(margin-left, 0);
 		}
 	}
 
 	a.header__reg {
 		margin-left: 50px;
 		color: @accent;
+		.sm(display, none);
 
 		&:hover {
 			text-decoration: underline;
 		}
+	}
+
+	&__burger {
+		@toggler-part-height: 1px;
+		@toggler-part-bg-color: @white;
+		@transition-time: 0.5s;
+
+		display: none;
+		.md-block({
+			display: block;
+			display: flex;
+			margin-right: auto;
+		});
+		// position: relative;
+		z-index: 13;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 19px;
+		user-select: none;
+		cursor: pointer;
+
+		&:focus {
+			outline: none;
+		}
+
+		& > span {
+			display: inline-block;
+			width: 100%;
+			height: @toggler-part-height;
+			background: @toggler-part-bg-color;
+			position: relative;
+			transition: background @transition-time @transition-time;
+			border-radius: 30px;
+
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				height: @toggler-part-height;
+				background: @toggler-part-bg-color;
+				transform-origin: 50% 50%;
+				transition: top @transition-time @transition-time, transform @transition-time;
+				border-radius: 30px;
+			}
+
+			&:before {
+				width: 100%;
+				top: -8px;
+			}
+
+			&:after {
+				width: 100%;
+				top: 8px;
+			}
+		}
+
+		&--close {
+			position: relative;
+			z-index: 15;
+
+			> span {
+				transition: background @transition-time;
+				background: transparent;
+
+				&:before,
+				&:after {
+					width: 100%;
+					transition: top @transition-time, transform @transition-time @transition-time;
+					top: 0;
+					background-color: @textcolor;
+				}
+
+				&:before {
+					transform: rotate3d(0, 0, 1, 45deg);
+				}
+
+				&:after {
+					transform: rotate3d(0, 0, 1, -45deg);
+				}
+			}
+  	}
 	}
 
 }
