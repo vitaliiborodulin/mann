@@ -8,6 +8,7 @@ $(function(){
 	//= components/burger.js
 	//= components/menuClick.js
 	//= components/upBtn.js
+	//= components/calc.js
 
 });
 

@@ -1,5 +1,146 @@
 <section class="cost" id="cost">
-	<div class="containet">
-		cost
+	<div class="container">
+		<h2 class="cost__title section__title">Билеты</h2>
+
+		<div class="cost__tickets">
+
+			<div class="cost__box cost__box--online">
+				<div class="cost__item">
+					<h3>Онлайн</h3>
+					<div class="cost__price"><span>9 900</span> ₽</div>
+					<ul>
+						<li>ссылка на онлайн-трансляцию</li>
+						<li>доступ к записи тренинга до 15 мая</li>
+						<li>слайды</li>
+					</ul>
+				</div>
+				<div class="cost__item">
+					<h3>Онлайн<sup>+</sup></h3>
+					<div class="cost__price"><span>14 900</span> ₽</div>
+					<ul>
+						<li>ссылка на онлайн-трансляцию</li>
+						<li><span>бессрочный</span> доступ к записи тренинга</li>
+						<li>слайды</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="cost__box cost__box--offline">
+				<div class="cost__item">
+					<h3>Очное</h3>
+					<div class="cost__price"><span>24 900</span> ₽</div>
+					<ul>
+						<li>место в зале</li>
+						<li>кофе-брейки и обед</li>
+						<li>сертификат</li>
+						<li>слайды</li>
+					</ul>
+				</div>
+				<div class="cost__item">
+					<h3>Очное<sup>+</sup></h3>
+					<div class="cost__price"><span>29 900</span> ₽</div>
+					<ul>
+						<li>место в зале</li>
+						<li>кофе-брейки и обед</li>
+						<li>сертификат</li>
+						<li>бессрочный доступ к записи тренинга</li>
+						<li>слайды</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="cost__box cost__box--comand">
+				<div class="cost__item">
+					<h3>Команда очно</h3>
+					<ul>
+						<li>от трёх человек</li>
+						<li>скидка 10%</li>
+						<li>бессрочный доступ к записи тренинга в подарок</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+			<form action="#" method="post" class="cost__form">
+				<a href="#" class="cost__form-ofert" target="_blank">Договор оферты</a>
+				<h3>Регистрация и оплата</h3>
+				
+				<div class="cost__form-wrapper cost__form-sum">
+					<p class="cost__form-title">Выберите билет</p>
+					<div class="cost__form-btn">
+						<input type="radio" name="cost_sum" id="cost_sum_1" value="9900">
+						<label for="cost_sum_1">9 900 ₽</label>
+					</div>
+					<div class="cost__form-btn">
+						<input type="radio" name="cost_sum" id="cost_sum_2" value="14900">
+						<label for="cost_sum_2">14 900 ₽</label>
+					</div>
+					<div class="cost__form-btn">
+						<input type="radio" name="cost_sum" id="cost_sum_3" value="24900">
+						<label for="cost_sum_3">24 900 ₽</label>
+					</div>
+					<div class="cost__form-btn">
+						<input type="radio" name="cost_sum" id="cost_sum_4" value="29900">
+						<label for="cost_sum_4">29 900 ₽</label>
+					</div>
+				</div>
+
+				<div class="cost__form-middle">
+					<div class="cost__form-left">
+
+						<div class="cost__form-wrapper">
+							<p class="cost__form-title">Выберите количество билетов</p>
+							<input type="number" name="cost_quant" id="cost_quant" min="1" max="12" value="1">
+						</div>
+						
+						<div class="cost__form-wrapper cost__form-type">
+							<p class="cost__form-title">Способ оплаты</p>
+							<div class="cost__form-btn-wrapper">
+								<div class="cost__form-btn">
+									<input type="radio" name="cost_type" id="cost_type_1" value="card">
+									<label for="cost_type_1">Картой</label>
+								</div>
+								<div class="cost__form-btn">
+									<input type="radio" name="cost_type" id="cost_type_2" value="bill">
+									<label for="cost_type_2">Счёт</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="cost__form-wrapper">
+							<p class="cost__form-title">Промокод</p>
+							<input type="text" name="cost_promo" id="cost_promo" placeholder="Mannnnnnnnn">
+						</div>
+
+					</div>
+					<div class="cost__form-right">
+						<div class="cost__form-wrapper">
+							<p class="cost__form-title">Ваше имя и&nbsp;фамилия</p>
+							<input type="text" name="cost_name" id="cost_name" placeholder="Лисичка Лисичковна" required>
+						</div>
+						<div class="cost__form-wrapper">
+							<p class="cost__form-title">Номер телефона</p>
+							<input type="tel" name="cost_tel" id="cost_tel" placeholder="+7 (888) 000-00-00" required>
+						</div>
+						<div class="cost__form-wrapper">
+							<p class="cost__form-title">Эл. почта:</p>
+							<input type="email" name="cost_email" id="cost_email" placeholder="lisichka@gmail.com" required>
+						</div>
+					</div>
+				</div>
+
+				<div class="cost__form-bottom">
+					<div class="cost__form-left">
+						<div class="cost__form-total">Всего к оплате: <span id="cost_total">0</span> ₽</div>
+						<input type="hidden" name="total" value="">
+					</div>
+					<div class="cost__form-right">
+						<button type="submit" data-fancybox data-src="#success">Зарегистрироваться</button>
+					</div>
+				</div>
+
+			</form> 
+
 	</div>
 </section>

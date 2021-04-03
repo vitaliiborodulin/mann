@@ -16,6 +16,7 @@
 		font-family: @fname;
 		font-style: @fstyle;
 		font-weight: @fweight;
+		display: swap;
 		src: url(@furl) format('woff2');
 	}
 }
@@ -51,6 +52,22 @@ input, textarea {
 	outline: none;
 	&:focus:required:invalid { border-color: red }
 	&:required:valid { border-color: green }
+}
+
+input {
+	padding: 5px 20px;
+	height: 60px;
+	font-size: 24px;
+	border: 1px solid @beige;
+	border-radius: 20px;
+	.md-block({
+		height: 45px;
+		font-size: 18px;
+	});
+}
+
+input[type=number] {
+	text-align: center;
 }
 
 html {

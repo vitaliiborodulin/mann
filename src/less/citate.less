@@ -14,6 +14,7 @@
 	&__info {
 		.col();
 		.size(7);
+		.size-lg(6);
 		.size-md(12);
 
 		font-size: 20px;
@@ -25,22 +26,26 @@
 
 		p:not(:last-child) {
 			margin-bottom: 20px;
+			.md(margin-bottom, 10px);
 		}
 	}
 
 	&__text {
 		.col();
 		.size(5);
+		.size-lg(6);
 		.size-md(12);
 		position: relative;
 		padding-left: 60px;
-		// padding-right: 30px;
+		padding-right: 10px;
 
 		font-size: 30px;
 		line-height: 40px;
 		.md-block({
 			order: -1;
 			margin-bottom: 30px;
+			padding-left: 20px;
+			padding-right: 5px;
 			font-size: 18px;
 			line-height: 26px;
 		});
@@ -48,25 +53,36 @@
 		&::before, &::after {
 			position: absolute;
 			color: @accent;
-			font-size: 200px;
-			.md(font-size, 30px);
+			// font-size: 200px;
+			// .md(font-size, 60px);
+			width: 75px;
+			height: 80px;
+			.md-block({
+				width: 16px;
+				height: 23px;
+			});
 		}
 
 		&::before {
-			content: '\00ab';
+			content: '';
+			background: url(../img/arrow-left.svg) no-repeat;
 			top: 0;
-			left: -105px;
+			left: -36px;
 			.md-block({
-				left: 0;
+				left: -10px;
+				background: url(../img/arrow-left-mob.svg) no-repeat;
 			});
 		}
 
 		&::after {
-			content: '\00bb';
-			right: -5px;
-			bottom: -11px;
+			content: '';
+			background: url(../img/arrow-right.svg) no-repeat;
+			right: -15px;
+			bottom: -40px;
 			.md-block({
-				right: 0;
+				right: -8px;
+				bottom: -8px;
+				background: url(../img/arrow-right-mob.svg) no-repeat;
 			});
 		}
 

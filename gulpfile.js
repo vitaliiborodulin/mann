@@ -216,7 +216,7 @@ exports.build = gulp.series(
 		htmlProd,
 		cssProd,
 		jsProd,
-		imagesProd,
+		imagesDev,
 		copy
 	)
 );
