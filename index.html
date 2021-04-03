@@ -246,13 +246,14 @@
 	
 			</div>
 	
-				<!-- <form action="#" method="post" class="cost__form">
+				<form action="#" method="post" class="cost__form">
+					<a href="#" class="cost__form-ofert" target="_blank">Договор оферты</a>
 					<h3>Регистрация и оплата</h3>
 					
 					<div class="cost__form-wrapper cost__form-sum">
 						<p class="cost__form-title">Выберите билет</p>
 						<div class="cost__form-btn">
-							<input type="radio" name="cost_sum" id="cost_sum_1" value="9900">
+							<input type="radio" name="cost_sum" id="cost_sum_1" value="9900" checked>
 							<label for="cost_sum_1">9 900 ₽</label>
 						</div>
 						<div class="cost__form-btn">
@@ -264,7 +265,7 @@
 							<label for="cost_sum_3">24 900 ₽</label>
 						</div>
 						<div class="cost__form-btn">
-							<input type="radio" name="cost_sum" id="cost_sum_4" value="29900" checked>
+							<input type="radio" name="cost_sum" id="cost_sum_4" value="29900">
 							<label for="cost_sum_4">29 900 ₽</label>
 						</div>
 					</div>
@@ -277,15 +278,17 @@
 								<input type="number" name="cost_quant" id="cost_quant" min="1" max="12" value="1">
 							</div>
 							
-							<div class="cost__form-wrapper">
+							<div class="cost__form-wrapper cost__form-type">
 								<p class="cost__form-title">Способ оплаты</p>
-								<div class="cost__form-btn">
-									<input type="radio" name="cost_type" id="cost_type_1" value="card">
-									<label for="cost_type_1">Картой</label>
-								</div>
-								<div class="cost__form-btn">
-									<input type="radio" name="cost_type" id="cost_type_2" value="bill">
-									<label for="cost_type_2">Счёт</label>
+								<div class="cost__form-btn-wrapper">
+									<div class="cost__form-btn">
+										<input type="radio" name="cost_type" id="cost_type_1" value="card">
+										<label for="cost_type_1">Картой</label>
+									</div>
+									<div class="cost__form-btn">
+										<input type="radio" name="cost_type" id="cost_type_2" value="bill">
+										<label for="cost_type_2">Счёт</label>
+									</div>
 								</div>
 							</div>
 	
@@ -313,14 +316,15 @@
 	
 					<div class="cost__form-bottom">
 						<div class="cost__form-left">
-							<div class="cost__form-total">Всего к оплате: <span id="cost_total">0</span>₽</div>
+							<div class="cost__form-total">Всего к оплате: <span id="cost_total">0</span> ₽</div>
+							<input type="hidden" name="total">
 						</div>
 						<div class="cost__form-right">
 							<button type="submit">Зарегистрироваться</button>
 						</div>
 					</div>
 	
-				</form> -->
+				</form> 
 	
 		</div>
 	</section>
