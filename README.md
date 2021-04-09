@@ -1,5 +1,5 @@
 # Mann
 
-Тренинг Игоря Манна
+Тренинг [Игоря Манна](https://igor-mann.ru/justalittle)
 
 
