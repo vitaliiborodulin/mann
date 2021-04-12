@@ -69,19 +69,19 @@
 				<div class="cost__form-wrapper cost__form-sum">
 					<p class="cost__form-title">Выберите билет</p>
 					<div class="cost__form-btn">
-						<input type="radio" name="cost_sum" id="cost_sum_1" value="9900">
+						<input type="radio" name="info[package]" id="cost_sum_1" value="9900">
 						<label for="cost_sum_1">9 900 ₽</label>
 					</div>
 					<div class="cost__form-btn">
-						<input type="radio" name="cost_sum" id="cost_sum_2" value="14900">
+						<input type="radio" name="info[package]" id="cost_sum_2" value="14900">
 						<label for="cost_sum_2">14 900 ₽</label>
 					</div>
 					<div class="cost__form-btn">
-						<input type="radio" name="cost_sum" id="cost_sum_3" value="24900">
+						<input type="radio" name="info[package]" id="cost_sum_3" value="24900">
 						<label for="cost_sum_3">24 900 ₽</label>
 					</div>
 					<div class="cost__form-btn">
-						<input type="radio" name="cost_sum" id="cost_sum_4" value="29900">
+						<input type="radio" name="info[package]" id="cost_sum_4" value="29900">
 						<label for="cost_sum_4">29 900 ₽</label>
 					</div>
 				</div>
@@ -91,18 +91,18 @@
 
 						<div class="cost__form-wrapper">
 							<p class="cost__form-title">Выберите количество билетов</p>
-							<input type="number" name="cost_quant" id="cost_quant" min="1" max="12" value="1">
+							<input type="number" name="info[count]" id="cost_quant" min="1" max="12" value="1">
 						</div>
 						
 						<div class="cost__form-wrapper cost__form-type">
 							<p class="cost__form-title">Способ оплаты</p>
 							<div class="cost__form-btn-wrapper">
 								<div class="cost__form-btn">
-									<input type="radio" name="cost_type" id="cost_type_1" value="card">
+									<input type="radio" name="info[type]" id="cost_type_1" value="card" checked>
 									<label for="cost_type_1">Картой</label>
 								</div>
 								<div class="cost__form-btn">
-									<input type="radio" name="cost_type" id="cost_type_2" value="bill">
+									<input type="radio" name="info[type]" id="cost_type_2" value="bill">
 									<label for="cost_type_2">Счёт</label>
 								</div>
 							</div>
@@ -110,22 +110,22 @@
 
 						<div class="cost__form-wrapper">
 							<p class="cost__form-title">Промокод</p>
-							<input type="text" name="cost_promo" id="cost_promo" placeholder="Mannnnnnnnn">
+							<input type="text" name="info[promocode]" id="cost_promo" placeholder="Mannnnnnnnn">
 						</div>
 
 					</div>
 					<div class="cost__form-right">
 						<div class="cost__form-wrapper">
 							<p class="cost__form-title">Ваше имя и&nbsp;фамилия</p>
-							<input type="text" name="cost_name" id="cost_name" placeholder="Лисичка Лисичковна" required>
+							<input type="text" name="info[name]" id="cost_name" placeholder="Лисичка Лисичковна" required>
 						</div>
 						<div class="cost__form-wrapper">
 							<p class="cost__form-title">Номер телефона</p>
-							<input type="tel" name="cost_tel" id="cost_tel" placeholder="+7 (888) 000-00-00" required>
+							<input type="tel" name="info[phone]" id="cost_tel" placeholder="+7 (888) 000-00-00" required>
 						</div>
 						<div class="cost__form-wrapper">
 							<p class="cost__form-title">Эл. почта:</p>
-							<input type="email" name="cost_email" id="cost_email" placeholder="lisichka@gmail.com" required>
+							<input type="email" name="info[mail]" id="cost_email" placeholder="lisichka@gmail.com" required>
 						</div>
 					</div>
 				</div>
@@ -133,7 +133,8 @@
 				<div class="cost__form-bottom">
 					<div class="cost__form-left">
 						<div class="cost__form-total">Всего к оплате: <span id="cost_total">0</span> ₽</div>
-						<input type="hidden" name="total" value="">
+						<div class="skidka"></div>
+						<input type="hidden" id="priceHidden" name="info[price]" value="">
 					</div>
 					<div class="cost__form-right">
 						<button type="submit" data-fancybox data-src="#success">Зарегистрироваться</button>
